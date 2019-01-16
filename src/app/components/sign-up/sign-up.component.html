@@ -1,0 +1,52 @@
+<div class="row signup-tab">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <h1>Sign up</h1>
+      <hr><br>
+      <!-- <form (ngSubmit)="onSubmit()" ngNativeValidate> -->
+        <span  *ngIf="authuser">
+        <div class="form-group">
+          <!-- <label for="email">Email</label>
+          <input
+            [(ngModel)]="user.email"
+            name="email"
+            type="email"
+            required
+            class="form-control"
+            id="email"
+            placeholder="enter your email"> -->
+
+            
+            <input type="text" placeholder="email" #email  class="form-control"  type="email" required>
+            <input type="text" placeholder="password" #password  class="form-control">
+           
+        </div>
+       
+
+    
+
+        <button type="submit" class="btn btn-primary" (click)="addUser(email.value,password.value)">Submit</button>
+        <a [routerLink]="['/']" class="btn btn-success">Cancel</a>
+        
+          </span>
+
+          <span *ngIf="!authuser">  
+              <h3>Sign Up Done
+              <a [routerLink]="['/']">Log in Here !!!</a></h3>
+          </span>
+
+
+      <p *ngIf="authuser">
+        <span>Already have an account?&nbsp;</span>
+        <a [routerLink]="['/']">Log in!</a>
+      </p>
+
+    </div>
+
+    
+
+
+  </div>
+  
+
+ 

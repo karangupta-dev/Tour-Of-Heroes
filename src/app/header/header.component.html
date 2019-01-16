@@ -1,0 +1,17 @@
+<div class="header">
+  <h1>{{title}}</h1>
+  <!-- 
+  <a [routerLink]="['']" class="logout">Log Out!</a> -->
+  <button class="logout" title="delete hero"(click)="logout()">Logout</button>
+  <h1>{{auser.email}}</h1>
+  
+  
+  </div>
+  <nav  class="navigator" >
+    <a routerLink="/dashboard/:id">Dashboard </a>
+    <a routerLink="/heroes">Heroes</a>
+    <a routerLink="/hero-fetch">Hero-Fetch</a>
+    <a routerLink="/landing">flex</a>
+    <a routerLink="/scroll">Scroll</a>
+  </nav>
+  

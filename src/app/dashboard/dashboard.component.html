@@ -1,0 +1,32 @@
+<app-header></app-header>
+
+ <!-- <div class="paginate">
+  <pagination-controls (pageChange)="p =$event"></pagination-controls>
+  Result Per Page:<select class='select-option' [(ngModel)]='ip' >
+    <option class='option' *ngFor='let option of options' [value]="option">{{option}}</option>
+  </select>
+</div> -->
+
+<div class="dash-header"><h3>Top Heroes</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let hero of heroes | paginate: {itemsPerPage:ip, currentPage: p} | async;" class="col-1-4"
+      routerLink="/detail/{{hero.id}}">
+      
+    <div class="module hero">
+      <h4>{{hero.name}}</h4>
+    </div>
+  </a>
+</div>
+
+
+
+<div class="search-class">
+
+  <!-- <br/>
+Name:<input type='text' [(ngModel)]='name'/>
+<br/> 
+
+[simpleInput]='name'-->
+<app-hero-search ></app-hero-search>
+</div>
+</div>

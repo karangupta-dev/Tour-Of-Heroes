@@ -1,0 +1,29 @@
+
+<!-- <div class="right" *ngIf="users">
+
+    <h3>Users List</h3>
+    <ul >
+  
+        <li *ngFor="let user of users | async;">
+                {{user.email}}
+                {{user.password}}
+                
+      </li>
+    </ul>
+  
+  </div> -->
+  
+  <div class="right" *ngIf="users">
+
+      <h3>user List</h3>
+      <ul class="Users">
+          <li *ngFor="let user of users | async">
+            
+                  {{user.email}}
+                  {{user.password}}
+
+                  <button  title="delete"
+                  (click)="delUser(i)">x</button>
+        </li>
+      </ul>
+    </div>

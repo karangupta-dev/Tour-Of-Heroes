@@ -1,0 +1,32 @@
+.container-1{
+    display:flex;
+    justify-content:space-between;
+    /* align-items:flex-start; */
+}
+.container-1 div{
+ border:1px #ccc solid;
+ padding:10px;
+ /* margin-right: 50px; */
+flex-basis:30%;
+}
+.box-1{
+    flex:2;
+    order:2;
+    background-color:red;
+    
+  
+}
+.box-2{
+    flex:1;
+    order:1;
+    background-color:blue;
+ 
+
+}
+.box-3{
+    flex:1;
+    order:3;
+    background-color:yellow;
+   
+ 
+}
